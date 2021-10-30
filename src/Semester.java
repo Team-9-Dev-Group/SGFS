@@ -5,6 +5,7 @@ public class Semester {
 
     int year;
     String semester;
+    String department;
 
     ArrayList<String> coursesTaken = new ArrayList<>();
     ArrayList<Achievements> achievementsArrayList = new ArrayList<Achievements>();
@@ -26,6 +27,14 @@ public class Semester {
 
     public String getSemester() {
         return semester;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getDepartment() {
+        return department;
     }
 
     //Adding objects to achievementsArrayList
