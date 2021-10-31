@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Semester {
 
@@ -47,23 +46,35 @@ public class Semester {
     {
         for(int i=0;i<achievementsArrayList.size();i++)
         {
-            if(achievementsArrayList.get(i).achievementName==Name)
+            if(achievementsArrayList.get(i).titleOfAchievement ==Name)
             {
                 achievementsArrayList.remove(i);
                 break;
             }
         }
     }
-    public void removeAchievement(String Name, int year)
+    public void removeAchievement(String Name, Date date)
     {
         for(int i=0;i<achievementsArrayList.size();i++)
         {
-            if(achievementsArrayList.get(i).achievementName==Name && achievementsArrayList.get(i).achievementYear==year)
+            if(achievementsArrayList.get(i).titleOfAchievement ==Name && achievementsArrayList.get(i).achievementDate==date)
             {
                 achievementsArrayList.remove(i);
                 break;
             }
         }
     }
-
+    public boolean modifyAchievement(String name,Date date,String type, String worth)
+    {
+        //searching with name and modifying other details
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).titleOfAchievement==name)
+            {
+                achievementsArrayList.get(i).setAchievementInfo(date, type, worth);
+                return true;
+            }
+        }
+        return false;
+    }
 }
