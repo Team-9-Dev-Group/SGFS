@@ -201,6 +201,9 @@ public class Semester {
 		}
     }
 
+    
+    //Methods for Exam CLass
+    
     public void listExams() {
         // Right now it will just print out the examLinkedList
         for (Exam exam : examLinkedList) {
