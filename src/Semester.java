@@ -204,6 +204,32 @@ public class Semester {
         }
         return false; // exam not found
     }
+    
+     public void addExam(String Course, String Date, String Exam_type, String Schedule, double Hrs_req, double Max_marks, double Contribution) {
+        Exam newExam = new Exam(Course, Date, Exam_type,Schedule, Hrs_req, Max_marks, Contribution);
+        examLinkedList.add(newExam);
+    }
+    
+    public void addExam(String Course, String Date) {
+        Exam newExam = new Exam(Course, Date);
+        examLinkedList.add(newExam);
+    }
+
+    public void removeExam(String Course, String Date) {
+        for (Exam i:examLinkedList ) {
+            if(i.Date.equals(Date) && i.Course.equalsIgnoreCase(Course)) {
+                examLinkedList.remove(i);
+            }
+        }
+    }
+
+    public void removeExam(String Date) {
+        for (Exam i:examLinkedList ) {
+            if(i.Date.equals(Date)) {
+                examLinkedList.remove(i);
+            }
+        }
+    }
 
 
 }
