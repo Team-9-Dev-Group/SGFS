@@ -202,7 +202,7 @@ public class Semester {
     }
 
     
-    //Methods for Exam CLass
+    //Methods for Exam Class
     
     public void listExams() {
         // Right now it will just print out the examLinkedList
