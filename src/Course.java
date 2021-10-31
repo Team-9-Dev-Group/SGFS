@@ -68,5 +68,4 @@ public class Course
 	{
 		return Time_Code;
 	}
-
 }
