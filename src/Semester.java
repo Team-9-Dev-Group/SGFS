@@ -8,7 +8,7 @@ public class Semester {
     String department;
 
     ArrayList<String> coursesTaken = new ArrayList<>();
-    ArrayList<Achievements> achievementsArrayList = new ArrayList<Achievements>();
+    ArrayList<achievement> achievementsArrayList = new ArrayList<achievement>();
     LinkedList<Exam> examLinkedList = new LinkedList<Exam>();
 
 
@@ -39,9 +39,31 @@ public class Semester {
 
     //Adding objects to achievementsArrayList
     public void addAchievement(){
-        Achievements achievement = new Achievements();
+        achievement Achievement= new achievement();
         //TODO: add something according to Achievements class
-        achievementsArrayList.add(achievement);
+        achievementsArrayList.add(Achievement);
+    }
+    public void removeAchievement(String Name)
+    {
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).achievementName==Name)
+            {
+                achievementsArrayList.remove(i);
+                break;
+            }
+        }
+    }
+    public void removeAchievement(String Name, int year)
+    {
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).achievementName==Name && achievementsArrayList.get(i).achievementYear==year)
+            {
+                achievementsArrayList.remove(i);
+                break;
+            }
+        }
     }
 
 }
