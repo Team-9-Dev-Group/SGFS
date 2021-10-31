@@ -5,15 +5,17 @@ public class Exam {
     float contribution;
     float obtainedMarks;
     boolean proctored;
+    String courseName;
 
-    // Course Parameter will be added when all the codes is merged , expect it it will give error 
+    // Course Class Object Parameter will be added when all the codes is merged , expect it it will give error 
 
-    Exam(String examType, int maxMarks ,float contribution ,float obtainedMarks ,boolean proctored){
+    Exam(String examType, int maxMarks ,float contribution ,float obtainedMarks ,boolean proctored, String courseName){
         this.examType = examType;
         this.maxMarks = maxMarks;
         this.contribution = contribution;
         this.obtainedMarks = obtainedMarks;
         this.proctored = proctored;
+        this.courseName = courseName;
     }
 
 
@@ -56,5 +58,13 @@ public class Exam {
 
     public boolean isProctored() {
         return proctored;
+    }
+    
+    public void setCourseName(String courseName){
+        this.courseName = courseName;
+    }
+
+    public String getCourseName() {
+        return courseName;
     }
 }
