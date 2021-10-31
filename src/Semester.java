@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Semester {
 
@@ -7,8 +6,8 @@ public class Semester {
     String semester;
     String department;
 
-    ArrayList<String> coursesTaken = new ArrayList<>();
-    ArrayList<Achievements> achievementsArrayList = new ArrayList<Achievements>();
+    ArrayList<Course> CoursesList = new ArrayList<Course>();
+    ArrayList<achievement> achievementsArrayList = new ArrayList<achievement>();
     LinkedList<Exam> examLinkedList = new LinkedList<Exam>();
     
     //Getters and setters
@@ -37,27 +36,61 @@ public class Semester {
     }
 
     //Adding objects to achievementsArrayList
-    public void addAchievement() {
-        Achievements achievement = new Achievements();
+
+    public void addAchievement(String name){
+        achievement Achievement= new achievement(name);
         //TODO: add something according to Achievements class
-        achievementsArrayList.add(achievement);
+        achievementsArrayList.add(Achievement);
+    }
+    public void addAchievement(String name,Date date)
+    {
+        achievement Achievement = new achievement(name,date);
+        achievementsArrayList.add(Achievement);
+    }
+    public void addAchievement(String name,Date date,String type)
+    {
+        achievement Achievement = new achievement(name,date,type);
+        achievementsArrayList.add(Achievement);
+    }
+    public void removeAchievement(String Name)
+    {
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).titleOfAchievement ==Name)
+            {
+                achievementsArrayList.remove(i);
+                break;
+            }
+        }
+    }
+    public void removeAchievement(String Name, Date date)
+    {
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).titleOfAchievement ==Name && achievementsArrayList.get(i).achievementDate==date)
+            {
+                achievementsArrayList.remove(i);
+                break;
+            }
+        }
     }
     
+    public boolean modifyAchievement(String name,Date date,String type, String worth)
+    {
+        //searching with name and modifying other details
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).titleOfAchievement==name)
+            {
+                achievementsArrayList.get(i).setAchievementInfo(date, type, worth);
+                return true;
+            }
+        }
+        return false;
+    }
+
     
     // Course List method 
-    
-    static Course[] Sem_1 = new Course[8];
-    static Course[] Sem_2 = new Course[8];
-    static Course[] Sem_3 = new Course[9];
-    static Course[] Sem_4_CSE = new Course[9];
-    static Course[] Sem_4_IT = new Course[9];
-    static Course[] Sem_5_CSE = new Course[8];
-    static Course[] Sem_5_IT = new Course[9];
-    static Course[] Sem_6_CSE = new Course[8];
-    static Course[] Sem_6_IT = new Course[7];
-    static Course[] Sem_7_CSE = new Course[7];
-    static Course[] Sem_7_IT = new Course[7];
-    static Course Sem_8 = new Course();                        //Sem 8 has only Project.
     
     static String str = "Optional Course";
     
@@ -74,83 +107,17 @@ public class Semester {
 	static String[] Sem_7_Courses_IT = new String[] {"IT401","IT461",str,str,str,str,"IT491"};
 	static String[] Sem_8_Courses = new String[] {"Project"};
     
-    static                                                     //This block must be executed.
+    private void set_CourseList( String[] courses )    
     {
-    	for ( int i = 0 ; i < 9 ; i++ )                        //Initialization of Objects.
-        {
-    		Sem_3[i] = new Course();
-    		
-    		Sem_4_CSE[i] = new Course();
-    		
-    		Sem_4_IT[i] = new Course();
-    		
-    		Sem_5_IT[i] = new Course();
-    		
-    		if ( i < 8 )
-        	{
-    			Sem_1[i] = new Course();
-    			
-    			Sem_2[i] = new Course();
-    			
-    			Sem_5_CSE[i] = new Course();
-    			
-    			Sem_6_CSE[i] = new Course();
-        	}
-        	
-        	if ( i < 7 )
-        	{
-        		Sem_6_IT[i] = new Course();
-        		
-        		Sem_7_CSE[i] = new Course();
-        		
-        		Sem_7_IT[i] = new Course();
-        	}
-        }
-    	
-		set_CourseList( Sem_1 , Sem_1_Courses );
-		set_CourseList( Sem_2 , Sem_2_Courses );
-		set_CourseList( Sem_3 , Sem_3_Courses );
-		set_CourseList( Sem_4_CSE , Sem_4_Courses_CSE );
-		set_CourseList( Sem_4_IT , Sem_4_Courses_IT );
-		set_CourseList( Sem_5_CSE , Sem_5_Courses_CSE );
-		set_CourseList( Sem_5_IT , Sem_5_Courses_IT );
-		set_CourseList( Sem_6_CSE , Sem_6_Courses_CSE );
-		set_CourseList( Sem_6_IT , Sem_6_Courses_IT );
-		set_CourseList( Sem_7_CSE , Sem_7_Courses_CSE );
-		set_CourseList( Sem_7_IT , Sem_7_Courses_IT );
-    	Sem_8.set_Code("Project");
-    }
-    
-    private static void set_CourseList( Object[] Sem , String[] Courses )    
-    {
-    	for ( int i = 0 ; i < 9 ; i++ )
-    	{
-    		if ( Sem.length == 8 )
-    		{
-    			if ( i == 8 )
-    			break;
-    		}
-    		
-    		if ( Sem.length == 7 )
-    		{
-    			if ( i == 7 )
-        		break;
-    		}
-    		
-    		((Course) Sem[i]).set_Code(Courses[i]);
+    	for ( int i = 0 ; i < courses.length ; i++ )
+    	{	
+    		Course name = new Course();
+    		name.set_Code(courses[i]);
+    		CoursesList.add(name);
     	}
     }
     
-    private static String[] return_CourseList( Object[] Sem )
-    {
-    	String[] str = new String[Sem.length];
-    	for ( int i = 0 ; i < Sem.length ; i++ )
-    		str[i] = ((Course) Sem[i]).get_Code();
-    	
-    	return str;
-    }
-    
-    public String[] create_CourseList( int year , String semester , String department )
+    public void create_CourseList( int year , String semester , String department )
     {
     	int Sem_No = 0 ;
 		switch ( semester )
@@ -168,39 +135,49 @@ public class Semester {
 		switch ( Sem_No )
 		{
 			case 1 :
-				return return_CourseList(Sem_1);
+				set_CourseList(Sem_1_Courses);
+				break;
 			case 2 :
-				return return_CourseList(Sem_2);
+				set_CourseList(Sem_2_Courses);
+				break;
 			case 3 :
-				return return_CourseList(Sem_3);
+				set_CourseList(Sem_3_Courses);
+				break;
 			case 4 :
 				if ( department == "CSE" )
-				return return_CourseList(Sem_4_CSE);
-				if ( department == "IT" )
-				return return_CourseList(Sem_4_IT);
+				set_CourseList(Sem_4_Courses_CSE);
+				else if ( department == "IT" )
+				set_CourseList(Sem_4_Courses_IT);
+				break;
 			case 5 :
 				if ( department == "CSE" )
-					return return_CourseList(Sem_5_CSE);
-				if ( department == "IT" )
-					return  return_CourseList(Sem_5_IT);
+				set_CourseList(Sem_5_Courses_CSE);
+				else if ( department == "IT" )
+				set_CourseList(Sem_5_Courses_IT);
+				break;
 			case 6 :
 				if ( department == "CSE" )
-					return return_CourseList(Sem_6_CSE);
-				if ( department == "IT" )
-					return  return_CourseList(Sem_6_IT);
+				set_CourseList(Sem_6_Courses_CSE);
+				else if ( department == "IT" )
+				set_CourseList(Sem_6_Courses_IT);
+				break;
 			case 7 :
 				if ( department == "CSE" )
-					return return_CourseList(Sem_7_CSE);
-				if ( department == "IT" )
-					return  return_CourseList(Sem_7_IT);
+				set_CourseList(Sem_7_Courses_CSE);
+				else if ( department == "IT" )
+				set_CourseList(Sem_7_Courses_IT);
+				break;
 			case 8 :
-				return Sem_8_Courses;
-				
+				set_CourseList(Sem_8_Courses);
+				break;
+
 			default :
-				return null;
+				System.out.println("Invalid Input");
+				
 		}
     }
-
+    
+    
     
     //Methods for Exam Class
     
@@ -227,5 +204,6 @@ public class Semester {
         }
         return false; // exam not found
     }
+
 
 }
