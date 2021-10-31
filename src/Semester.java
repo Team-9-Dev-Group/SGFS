@@ -37,6 +37,7 @@ public class Semester {
     }
 
     //Adding objects to achievementsArrayList
+
     public void addAchievement(String name){
         achievement Achievement= new achievement(name);
         //TODO: add something according to Achievements class
@@ -87,4 +88,31 @@ public class Semester {
         }
         return false;
     }
+
+
+    public void listExams() {
+        // Right now it will just print out the examLinkedList
+        for (Exam exam : examLinkedList) {
+            System.out.println("Course - " + exam.getCourse());
+            System.out.println("Exam type - " + exam.getExamType());
+            System.out.println("Date - " + exam.getDate());
+            System.out.println("Maximum Marks - " + exam.getMaxMarks());
+            System.out.println("Weightage in final score (%)  - " + exam.getWeightage());
+            System.out.println("Obtained Marks - " + exam.getObtMarks());
+            System.out.println("Proctored - " + exam.getProctored());
+            System.out.println("\n");
+        }
+    }
+
+    public Boolean modifyExam(String course, String exam_type, String date, String max_marks, String weightage, String obt_marks, Boolean proctored) {
+        for (int i = 0; i < examLinkedList.size(); i++) {
+            if (examLinkedList.get(i).getCourse().equals(course) && examLinkedList.get(i).getExamType().equals(exam_type) && examLinkedList.get(i).getDate().equals(date)) {
+                examLinkedList.set(i, new Exam(course, exam_type, date, max_marks, weightage, obt_marks, proctored));
+                return true; // exam found and modified
+            }
+        }
+        return false; // exam not found
+    }
+
+
 }
