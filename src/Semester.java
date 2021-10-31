@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Semester {
 
@@ -8,7 +7,7 @@ public class Semester {
     String department;
 
     ArrayList<String> coursesTaken = new ArrayList<>();
-    ArrayList<Achievements> achievementsArrayList = new ArrayList<Achievements>();
+    ArrayList<achievement> achievementsArrayList = new ArrayList<achievement>();
     LinkedList<Exam> examLinkedList = new LinkedList<Exam>();
 
 
@@ -38,11 +37,58 @@ public class Semester {
     }
 
     //Adding objects to achievementsArrayList
-    public void addAchievement() {
-        Achievements achievement = new Achievements();
+
+    public void addAchievement(String name){
+        achievement Achievement= new achievement(name);
         //TODO: add something according to Achievements class
-        achievementsArrayList.add(achievement);
+        achievementsArrayList.add(Achievement);
     }
+    public void addAchievement(String name,Date date)
+    {
+        achievement Achievement = new achievement(name,date);
+        achievementsArrayList.add(Achievement);
+    }
+    public void addAchievement(String name,Date date,String type)
+    {
+        achievement Achievement = new achievement(name,date,type);
+        achievementsArrayList.add(Achievement);
+    }
+    public void removeAchievement(String Name)
+    {
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).titleOfAchievement ==Name)
+            {
+                achievementsArrayList.remove(i);
+                break;
+            }
+        }
+    }
+    public void removeAchievement(String Name, Date date)
+    {
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).titleOfAchievement ==Name && achievementsArrayList.get(i).achievementDate==date)
+            {
+                achievementsArrayList.remove(i);
+                break;
+            }
+        }
+    }
+    public boolean modifyAchievement(String name,Date date,String type, String worth)
+    {
+        //searching with name and modifying other details
+        for(int i=0;i<achievementsArrayList.size();i++)
+        {
+            if(achievementsArrayList.get(i).titleOfAchievement==name)
+            {
+                achievementsArrayList.get(i).setAchievementInfo(date, type, worth);
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public void listExams() {
         // Right now it will just print out the examLinkedList
@@ -67,5 +113,6 @@ public class Semester {
         }
         return false; // exam not found
     }
+
 
 }
