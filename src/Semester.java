@@ -37,9 +37,19 @@ public class Semester {
     }
 
     //Adding objects to achievementsArrayList
-    public void addAchievement(){
-        achievement Achievement= new achievement();
+    public void addAchievement(String name){
+        achievement Achievement= new achievement(name);
         //TODO: add something according to Achievements class
+        achievementsArrayList.add(Achievement);
+    }
+    public void addAchievement(String name,Date date)
+    {
+        achievement Achievement = new achievement(name,date);
+        achievementsArrayList.add(Achievement);
+    }
+    public void addAchievement(String name,Date date,String type)
+    {
+        achievement Achievement = new achievement(name,date,type);
         achievementsArrayList.add(Achievement);
     }
     public void removeAchievement(String Name)

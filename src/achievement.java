@@ -5,10 +5,7 @@ public class achievement{
     Date achievementDate;
     String achievementType; //academic or non academic
     String achievementWorth; //gold silver bronze
-    public achievement()
-    {
 
-    }
     public achievement(String name)
     {
         titleOfAchievement =name;
