@@ -10,8 +10,9 @@ public class Student {
 
 
     private ArrayList<achievement> achievementsArrayList = new ArrayList<achievement>();
+    private ArrayList<Club> clubArrayList = new ArrayList<Club>();
 
-    public Students(String name, String StudentId, Boolean isUG, String phone_no, String probation) {
+    public Student(String name, String StudentId, Boolean isUG, String phone_no, String probation) {
 
         this.name = name;
         this.StudentId = StudentId;
@@ -105,3 +106,27 @@ public class Student {
         }
         return false;
     }
+
+    //Adding Object to clubArrayList
+
+    public void addClub(String nameOfTheClub){
+        Club club = new Club();
+        club.setNameOfClub(nameOfTheClub);
+        clubArrayList.add(club);
+    }
+
+    //getter for clubArrayList
+
+    public ArrayList<Club> getClubArrayList() {
+        return clubArrayList;
+    }
+
+    //to check if student has joined a specific club or not
+
+    public boolean joinedClub(Club checkClub){
+        if (clubArrayList.contains(checkClub))
+            return true;
+        else
+            return false;
+    }
+}
