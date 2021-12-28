@@ -4,6 +4,12 @@ public class Club extends Committee {
     String nameOfSecretary;
     String nameOfViceSecretary;
     
+    pulibc Club(String nameOfClub,String nameOfCommittee,String nameOfSecretary,String nameOfViceSecretary) {
+        this.nameOfClub = nameOfClub;
+        this.nameOfCommittee = nameOfCommittee;
+        this.nameOfSecretary = nameOfSecretary;
+        this.nameOfViceSecretary = nameOfViceSecretary;     
+    }
     public void setNameOfClub(String nameOfClub) {
         this.nameOfClub = nameOfClub;
     }
