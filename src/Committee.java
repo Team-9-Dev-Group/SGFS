@@ -5,6 +5,14 @@ public class Committee extends GymKhana {
     String presidentName;
     String vicePresidentName;
     int noOfFeast;
+    
+    public Committee(int noOfclubs,String committeeName,String presidentName,String vicePresidentName,int noOfFeast) {
+        this.noOfclubs = noOfclubs;
+        this.committeeName = committeeName;
+        this.presidentName = presidentName;
+        this.vicePresidentName = vicePresidentName;
+        this.noOfFeast = noOfFeast;
+    }
 
     public int setNoOfclubs() {
         return noOfclubs;
