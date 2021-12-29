@@ -29,7 +29,33 @@ public class Main {
     }
 
     public static int options(){
+        Scanner obj = new Scanner(System.in);
 
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+
+        int i = obj.nextInt();
+
+        if(i == 1){
+
+        }
+        if (i == 2) {
+
+        }
+        if(i==3){
+
+        }
+        if(i==4){
+
+        }
+
+        return i;
     }
 
 
