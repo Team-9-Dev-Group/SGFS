@@ -35,6 +35,7 @@ public class Club{
     //method to print events
     public void printClubEvents() {
         for (int i=0;i<events.size();i++) {
+            System.out.println(this.nameOfClub);
             System.out.println(events.get(i));
         }
     }

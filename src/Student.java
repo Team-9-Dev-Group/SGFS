@@ -111,7 +111,6 @@ public class Student {
         return false;
     }
 
-    // Adding d to clubArrayList
     public void addClub(String nameOfTheClub){
         for (int i=0;i<listOfclubs.length;i++) {
             if (listOfclubs[i].equalsIgnoreCase(nameOfTheClub)) {
@@ -123,7 +122,7 @@ public class Student {
                 return;
             }
         }
-        System.out.println("ExtraCurricular.Club does not exist");
+        System.out.println("Sorry, club you entered does not exist");
     }
     
     //method to remove a particular club from the club arraylist
@@ -134,7 +133,7 @@ public class Student {
                 return;
             }
         }
-        System.out.println("ExtraCurricular.Club not enrolled!");
+        System.out.println("Club not enrolled!");
     }
 
     //method to add a particular event from a paricular club
@@ -160,8 +159,11 @@ public class Student {
     }
     
     // getter for clubArrayList
-    public ArrayList<Club> getClubArrayList() {
-        return clubArrayList;
+    public void printClubArrayList() {
+        for(Club club:clubArrayList){
+            club.printClubEvents();
+            System.out.println();
+        }
     }
 
     // to check if student has joined a specific club or not

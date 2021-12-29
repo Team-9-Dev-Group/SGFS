@@ -34,25 +34,36 @@ public class Main {
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 4 to Add Achievement");
-        System.out.println("Press 5 to Add Achievement");
-        System.out.println("Press 6 to Add Achievement");
-        System.out.println("Press 7 to Add Achievement");
-        System.out.println("Press 8 to Add Achievement");
+        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 5 to Add Club");
+        System.out.println("Press 6 to Remove Club");
+        System.out.println("Press 7 to Add Event in a Club");
+        System.out.println("Press 8 to Remove Event in a Club");
+        System.out.println("Press 9 to Print Clubs you are enrolled in");
 
         int i = obj.nextInt();
 
-        if(i == 1){
-
+        if(i == 5){
+            String clubName = obj.nextLine();
+            student.addClub(clubName);
         }
-        if (i == 2) {
-
+        if(i == 6){
+            String clubName = obj.nextLine();
+            student.removeClub(clubName);
         }
-        if(i==3){
-
+        if(i == 7){
+            String clubName = obj.nextLine();
+            String event = obj.nextLine();
+            student.addEventInClub(clubName, event);
         }
-        if(i==4){
-
+        if(i == 8){
+            String clubName = obj.nextLine();
+            String event = obj.nextLine();
+            student.removeEventInClub(clubName, event);
+        }
+        if(i==9){
+            System.out.println("Clubs you are enrolled in are as follows-");
+            student.printClubArrayList();
         }
 
         return i;
