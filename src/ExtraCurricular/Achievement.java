@@ -33,6 +33,5 @@ public class Achievement {
         System.out.println("Title: "+ titleOfAchievement);
         System.out.println("Date:"+achievementDate);
         System.out.println("Type: "+achievementType);
-        System.out.println("Position: "+achievementWorth);
     }
 }
