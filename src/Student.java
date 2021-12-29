@@ -1,3 +1,4 @@
+import Academics.Semester;
 import ExtraCurricular.Achievement;
 import ExtraCurricular.Club;
 
@@ -11,6 +12,7 @@ public class Student {
     private Boolean isUG;
     private String phone_no;
     private String Probation;
+    private Semester sem;
     final String[] listOfclubs = {"Design ExtraCurricular.Club","Coding ExtraCurricular.Club","Sports ExtraCurricular.Club","Photography ExtraCurricular.Club","Music club","Finance club","Drama ExtraCurricular.Club","EBSB club","Gaming ExtraCurricular.Club"};
 
 

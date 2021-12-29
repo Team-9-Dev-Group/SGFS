@@ -28,6 +28,8 @@ public class Main {
         System.out.print("Enter whether you are under probation - ");
         String probation = obj.nextLine();
 
+        System.out.println();
+
         return new Student(name, studentid, isUG, phoneNum, probation);
     }
 

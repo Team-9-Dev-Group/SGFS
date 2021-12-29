@@ -11,6 +11,7 @@ public class Semester {
 
     private ArrayList<Course> CoursesList = new ArrayList<Course>();
     private LinkedList<Exam> examLinkedList = new LinkedList<Exam>();
+    private LinkedList<Assignment> assignmentLinkedList = new LinkedList<>();
 
     //Getters and setters
     public void setYear(int year) {
