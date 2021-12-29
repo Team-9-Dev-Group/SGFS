@@ -35,16 +35,19 @@ public class Main {
 
     public static int options(Student student) {
         Scanner obj = new Scanner(System.in);
-
+        System.out.println();
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 2 to Modify Achievement");
         System.out.println("Press 3 to Delete Achievement");
         System.out.println("Press 4 to Display Achievement");
+
         System.out.println("Press 5 to Add Club");
         System.out.println("Press 6 to Remove Club");
         System.out.println("Press 7 to Add Event in a Club");
         System.out.println("Press 8 to Remove Event in a Club");
         System.out.println("Press 9 to Print Clubs you are enrolled in");
+
+        System.out.println("Press 10 to set semester");
 
         int i = obj.nextInt();
 
@@ -107,6 +110,9 @@ public class Main {
         if (i == 9) {
             System.out.println("Clubs you are enrolled in are as follows-");
             student.printClubArrayList();
+        }
+        if(i==10){
+            
         }
 
         return i;
