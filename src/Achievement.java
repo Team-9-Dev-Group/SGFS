@@ -1,21 +1,21 @@
 import java.util.Date;
 
-public class achievement{
+public class Achievement {
     String titleOfAchievement;
     Date achievementDate;
     String achievementType; //academic or non academic
     String achievementWorth; //gold silver bronze
 
-    public achievement(String name)
+    public Achievement(String name)
     {
         titleOfAchievement =name;
     }
-    public achievement(String name,Date date)
+    public Achievement(String name, Date date)
     {
         this(name);
         this.achievementDate=date;
     }
-    public achievement(String name,Date date,String type)
+    public Achievement(String name, Date date, String type)
     {
         this(name,date);
         this.achievementType=type;

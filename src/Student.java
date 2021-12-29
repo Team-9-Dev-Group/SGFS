@@ -9,7 +9,7 @@ public class Student {
     private String Probation;
 
 
-    private ArrayList<achievement> achievementsArrayList = new ArrayList<achievement>();
+    private ArrayList<Achievement> achievementsArrayList = new ArrayList<Achievement>();
     private ArrayList<Club> clubArrayList = new ArrayList<Club>();
 
     public Student(String name, String StudentId, Boolean isUG, String phone_no, String probation) {
@@ -63,18 +63,18 @@ public class Student {
 
     //Adding objects to achievementsArrayList
     public void addAchievement(String name) {
-        achievement Achievement = new achievement(name);
+        Achievement Achievement = new Achievement(name);
         //TODO: add something according to Achievements class
         achievementsArrayList.add(Achievement);
     }
 
     public void addAchievement(String name, Date date) {
-        achievement Achievement = new achievement(name, date);
+        Achievement Achievement = new Achievement(name, date);
         achievementsArrayList.add(Achievement);
     }
 
     public void addAchievement(String name, Date date, String type) {
-        achievement Achievement = new achievement(name, date, type);
+        Achievement Achievement = new Achievement(name, date, type);
         achievementsArrayList.add(Achievement);
     }
 
