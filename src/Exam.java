@@ -43,27 +43,27 @@ public class Exam {
         return examType;
     }
 
-    public void setMaxMarks(int maxMarks) {
+    public void setMaxMarks(String maxMarks) {
         this.maxMarks = maxMarks;
     }
 
-    public int getMaxMarks() {
+    public String getMaxMarks() {
         return maxMarks;
     }
 
-    public void setContribution(float contribution) {
+    public void setContribution(String contribution) {
         this.contribution = contribution;
     }
 
-    public float getContribution() {
+    public String getContribution() {
         return contribution;
     }
 
-    public void setObtainedMarks(float obtainedMarks) {
+    public void setObtainedMarks(String obtainedMarks) {
         this.obtainedMarks = obtainedMarks;
     }
 
-    public float getObtainedMarks() {
+    public String getObtainedMarks() {
         return obtainedMarks;
     }
 
