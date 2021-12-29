@@ -68,7 +68,6 @@ public class Student {
     //Adding objects to achievementsArrayList
     public void addAchievement(String name) {
         Achievement achievement = new Achievement(name);
-        //TODO: add something according to Achievements class
         achievementsArrayList.add(achievement);
     }
 

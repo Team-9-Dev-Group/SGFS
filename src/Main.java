@@ -32,8 +32,8 @@ public class Main {
         Scanner obj = new Scanner(System.in);
 
         System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 2 to Modify Achievement");
+        System.out.println("Press 3 to Delete Achievement");
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
@@ -43,6 +43,15 @@ public class Main {
         int i = obj.nextInt();
 
         if(i == 1){
+            System.out.println("Enter Acievement name - ");
+            String name = obj.nextLine();
+
+            System.out.println("Enter Acievement date - ");
+            String date = obj.nextLine();
+
+            System.out.println("Enter Acievement type - ");
+            String type = obj.nextLine();
+
 
         }
         if (i == 2) {
