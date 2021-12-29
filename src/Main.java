@@ -28,12 +28,16 @@ public class Main {
         return new Student(name, studentid, isUG, phoneNum, probation);
     }
 
-    public static void options(){
+    public static int options(){
 
     }
 
 
     public static void main(String[] args) {
         Student student1 = AddStudent();
+        int i;
+        do{
+            i = options();
+        }while(i!=0);
     }
 }
