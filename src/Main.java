@@ -28,7 +28,7 @@ public class Main {
         return new Student(name, studentid, isUG, phoneNum, probation);
     }
 
-    public static int options(){
+    public static int options(Student student){
         Scanner obj = new Scanner(System.in);
 
         System.out.println("Press 1 to Add Achievement");
@@ -65,11 +65,14 @@ public class Main {
         }
 
         return i;
-
     }
 
 
     public static void main(String[] args) {
         Student student1 = AddStudent();
+        int i;
+        do{
+            i = options(student1);
+        }while(i!=0);
     }
 }
