@@ -3,6 +3,7 @@ import ExtraCurricular.Club;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 
 public class Student {
     private String name;
@@ -13,7 +14,7 @@ public class Student {
     final String[] listOfclubs = {"Design ExtraCurricular.Club","Coding ExtraCurricular.Club","Sports ExtraCurricular.Club","Photography ExtraCurricular.Club","Music club","Finance club","Drama ExtraCurricular.Club","EBSB club","Gaming ExtraCurricular.Club"};
 
 
-    private ArrayList<Achievement> achievementsArrayList = new ArrayList<Achievement>();
+    public ArrayList<Achievement> achievementsArrayList = new ArrayList<Achievement>();
     private ArrayList<Club> clubArrayList = new ArrayList<Club>();
 
     public Student(String name, String StudentId, Boolean isUG, String phone_no, String probation) {
@@ -71,12 +72,12 @@ public class Student {
         achievementsArrayList.add(achievement);
     }
 
-    public void addAchievement(String name, Date date) {
+    public void addAchievement(String name, String date) {
         Achievement achievement = new Achievement(name, date);
         achievementsArrayList.add(achievement);
     }
 
-    public void addAchievement(String name, Date date, String type) {
+    public void addAchievement(String name, String date, String type) {
         Achievement achievement = new Achievement(name, date, type);
         achievementsArrayList.add(achievement);
     }
@@ -90,7 +91,7 @@ public class Student {
         }
     }
 
-    public void removeAchievement(String Name, Date date) {
+    public void removeAchievement(String Name, String date) {
         for (int i = 0; i < achievementsArrayList.size(); i++) {
             if (achievementsArrayList.get(i).titleOfAchievement == Name && achievementsArrayList.get(i).achievementDate == date) {
                 achievementsArrayList.remove(i);
@@ -99,7 +100,7 @@ public class Student {
         }
     }
 
-    public boolean modifyAchievement(String name, Date date, String type, String worth) {
+    public boolean modifyAchievement(String name, String date, String type, String worth) {
         //searching with name and modifying other details
         for (int i = 0; i < achievementsArrayList.size(); i++) {
             if (achievementsArrayList.get(i).titleOfAchievement == name) {
@@ -108,6 +109,12 @@ public class Student {
             }
         }
         return false;
+    }
+
+    public void displayAchievement(){
+        for(final Achievement achievement:achievementsArrayList){
+            System.out.println(achievement.titleOfAchievement);
+        }
     }
 
     // Adding d to clubArrayList

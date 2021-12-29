@@ -1,3 +1,6 @@
+import ExtraCurricular.Achievement;
+
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -34,7 +37,7 @@ public class Main {
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 2 to Modify Achievement");
         System.out.println("Press 3 to Delete Achievement");
-        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 4 to Display Achievement");
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
@@ -52,16 +55,33 @@ public class Main {
             System.out.println("Enter Acievement type - ");
             String type = obj.nextLine();
 
-
+            student.addAchievement(name,date,type);
         }
         if (i == 2) {
+            System.out.println("Enter Acievement name - ");
+            String name = obj.nextLine();
 
+            student.removeAchievement(name);
         }
         if(i==3){
+            System.out.println("Enter Acievement name - ");
+            String name = obj.nextLine();
 
+            System.out.println("Enter Acievement date - ");
+            String date = obj.nextLine();
+
+            System.out.println("Enter Acievement type - ");
+            String type = obj.nextLine();
+
+            System.out.println("Enter Acievement worth - ");
+            String worth = obj.nextLine();
+
+            student.modifyAchievement(name,date,type,worth);
         }
         if(i==4){
-
+            for(final Achievement achievement:student.achievementsArrayList){
+                achievement.getAchievementInfo();
+            }
         }
 
         return i;
