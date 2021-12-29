@@ -7,6 +7,7 @@ public class Student {
     private Boolean isUG;
     private String phone_no;
     private String Probation;
+    final String[] listOfclubs = {"Design Club","Coding Club","Sports Club","Photography Club","Music club","Finance club","Drama Club","EBSB club","Gaming Club"};
 
 
     private ArrayList<Achievement> achievementsArrayList = new ArrayList<Achievement>();
@@ -107,22 +108,33 @@ public class Student {
         return false;
     }
 
-    //Adding Object to clubArrayList
+    // CHECK WHETHER CLUB IS VALID
 
+    // Adding Object to clubArrayList
     public void addClub(String nameOfTheClub){
         Club club = new Club();
         club.setNameOfClub(nameOfTheClub);
+        // secretary
+        // jsec
         clubArrayList.add(club);
     }
 
-    //getter for clubArrayList
+    // removeClub
 
+    // club mai event add karne ke liye
+    public void addEventInClub(String nameOfTheClub, String event){
+//        clubArrayList SEARCH FOR CLUB
+    }
+
+    // CLUB MAI EVENT REMOVE KARNE KE LIYE
+
+
+    // getter for clubArrayList
     public ArrayList<Club> getClubArrayList() {
         return clubArrayList;
     }
 
-    //to check if student has joined a specific club or not
-
+    // to check if student has joined a specific club or not
     public boolean joinedClub(Club checkClub){
         if (clubArrayList.contains(checkClub))
             return true;

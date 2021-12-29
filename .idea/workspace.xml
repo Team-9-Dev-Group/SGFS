@@ -24,7 +24,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Club.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Student.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Semester.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Course.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="203GK1ZfIkRet3iMogfQ6FSibPp" />
   <component name="ProjectViewState">
@@ -35,6 +38,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

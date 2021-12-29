@@ -123,29 +123,29 @@ public class Semester {
     public void listExams() {
         // Right now it will just print out the examLinkedList
         for (Exam exam : examLinkedList) {
-            System.out.println("Course - " + exam.getCourse());
+            System.out.println("Course - " + exam.getCourseName());
             System.out.println("Exam type - " + exam.getExamType());
-            System.out.println("Date - " + exam.getDate());
+            System.out.println("Date - " + exam.getExamDate());
             System.out.println("Maximum Marks - " + exam.getMaxMarks());
-            System.out.println("Weightage in final score (%)  - " + exam.getWeightage());
-            System.out.println("Obtained Marks - " + exam.getObtMarks());
-            System.out.println("Proctored - " + exam.getProctored());
+            System.out.println("Weightage in final score (%)  - " + exam.getContribution());
+            System.out.println("Obtained Marks - " + exam.getObtainedMarks());
+            System.out.println("Proctored - " + exam.isProctored());
             System.out.println("\n");
         }
     }
 
     public Boolean modifyExam(String course, String exam_type, String date, String max_marks, String weightage, String obt_marks, Boolean proctored) {
         for (int i = 0; i < examLinkedList.size(); i++) {
-            if (examLinkedList.get(i).getCourse().equals(course) && examLinkedList.get(i).getExamType().equals(exam_type) && examLinkedList.get(i).getDate().equals(date)) {
-                examLinkedList.set(i, new Exam(course, exam_type, date, max_marks, weightage, obt_marks, proctored));
+            if (examLinkedList.get(i).getCourseName().equals(course) && examLinkedList.get(i).getExamType().equals(exam_type) && examLinkedList.get(i).getExamDate().equals(date)) {
+                examLinkedList.set(i, new Exam(exam_type,max_marks, weightage, obt_marks,proctored,course, date));
                 return true; // exam found and modified
             }
         }
         return false; // exam not found
     }
 
-    public void addExam(String Course, String Date, String Exam_type, String Schedule, double Hrs_req, double Max_marks, double Contribution) {
-        Exam newExam = new Exam(Course, Date, Exam_type, Schedule, Hrs_req, Max_marks, Contribution);
+    public void addExam(String course, String exam_type, String date, String max_marks, String weightage, String obt_marks, Boolean proctored) {
+        Exam newExam = new Exam(exam_type,max_marks, weightage, obt_marks,proctored,course, date);
         examLinkedList.add(newExam);
     }
 
@@ -156,7 +156,7 @@ public class Semester {
 
     public void removeExam(String Course, String Date) {
         for (Exam i : examLinkedList) {
-            if (i.Date.equals(Date) && i.Course.equalsIgnoreCase(Course)) {
+            if (i.examDate.equals(Date) && i.courseName.equalsIgnoreCase(Course)) {
                 examLinkedList.remove(i);
             }
         }
@@ -164,7 +164,7 @@ public class Semester {
 
     public void removeExam(String Date) {
         for (Exam i : examLinkedList) {
-            if (i.Date.equals(Date)) {
+            if (i.examDate.equals(Date)) {
                 examLinkedList.remove(i);
             }
         }

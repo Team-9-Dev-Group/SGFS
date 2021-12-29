@@ -1,27 +1,42 @@
 public class Exam {
 
     String examType;
-    int maxMarks;
-    float contribution;
-    float obtainedMarks;
+    String examDate;
+    String maxMarks;
+    String contribution;
+    String obtainedMarks;
     boolean proctored;
     String courseName;
 
-    // Course Class Object Parameter will be added when all the codes is merged , expect it it will give error 
-
-    Exam(String examType, int maxMarks ,float contribution ,float obtainedMarks ,boolean proctored, String courseName){
+    // Course Class Object Parameter will be added when all the codes is merged , expect it will give error
+    Exam(String examType, String maxMarks, String contribution, String obtainedMarks, boolean proctored, String courseName, String date) {
         this.examType = examType;
         this.maxMarks = maxMarks;
         this.contribution = contribution;
         this.obtainedMarks = obtainedMarks;
         this.proctored = proctored;
         this.courseName = courseName;
+        this.examDate = date;
+    }
+
+    public Exam(String course, String date) {
+        this.courseName = course;
+        this.examDate = date;
     }
 
 
     //Getters and Setters
-    public void setExamType(String examType){
+    public void setExamType(String examType) {
         this.examType = examType;
+    }
+
+
+    public String getExamDate() {
+        return examDate;
+    }
+
+    public void setExamDate(String examDate) {
+        this.examDate = examDate;
     }
 
     public String getExamType() {
@@ -59,8 +74,8 @@ public class Exam {
     public boolean isProctored() {
         return proctored;
     }
-    
-    public void setCourseName(String courseName){
+
+    public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
 
