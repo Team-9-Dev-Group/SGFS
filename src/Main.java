@@ -20,6 +20,12 @@ public class Main {
         String name = obj.nextLine();
         Student student1 = new Student();
     }
+
+    public static void options(){
+
+    }
+
     public static void main(String[] args) {
+
     }
 }
