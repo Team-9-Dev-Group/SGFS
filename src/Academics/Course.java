@@ -1,4 +1,6 @@
-public class Course 
+package Academics;
+
+public class Course
 {
 	private String Department;
 	private String Instructor1;

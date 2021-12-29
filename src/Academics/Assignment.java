@@ -1,3 +1,5 @@
+package Academics;
+
 public class Assignment {
 
     String Semester;
@@ -19,7 +21,7 @@ public class Assignment {
 
     // Getters and Setters
 
-    // Semester
+    // Academics.Semester
     public void setSemester(String Semester) {
         this.Semester = Semester;
     }
@@ -37,7 +39,7 @@ public class Assignment {
         return courseName;
     }
 
-    // Course Instructor
+    // Academics.Course Instructor
     public void setCourseInstructor(String CourseInstructor) {
         this.CourseInstructor = CourseInstructor;
     }

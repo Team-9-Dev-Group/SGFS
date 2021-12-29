@@ -23,10 +23,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/ExtraCurricular/Club.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Student.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Club.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Course.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Semester.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Academics/Semester.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Academics/Course.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="203GK1ZfIkRet3iMogfQ6FSibPp" />
   <component name="ProjectViewState">
@@ -67,6 +68,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

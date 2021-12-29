@@ -1,10 +1,12 @@
+package ExtraCurricular;
+
 import java.util.Date;
 
 public class Achievement {
-    String titleOfAchievement;
-    Date achievementDate;
-    String achievementType; //academic or non academic
-    String achievementWorth; //gold silver bronze
+    public String titleOfAchievement;
+    public Date achievementDate;
+    public String achievementType; //academic or non academic
+    public String achievementWorth; //gold silver bronze
 
     public Achievement(String name)
     {

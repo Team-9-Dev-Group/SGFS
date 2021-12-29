@@ -1,3 +1,6 @@
+import ExtraCurricular.Achievement;
+import ExtraCurricular.Club;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,7 +10,7 @@ public class Student {
     private Boolean isUG;
     private String phone_no;
     private String Probation;
-    final String[] listOfclubs = {"Design Club","Coding Club","Sports Club","Photography Club","Music club","Finance club","Drama Club","EBSB club","Gaming Club"};
+    final String[] listOfclubs = {"Design ExtraCurricular.Club","Coding ExtraCurricular.Club","Sports ExtraCurricular.Club","Photography ExtraCurricular.Club","Music club","Finance club","Drama ExtraCurricular.Club","EBSB club","Gaming ExtraCurricular.Club"};
 
 
     private ArrayList<Achievement> achievementsArrayList = new ArrayList<Achievement>();
@@ -120,7 +123,7 @@ public class Student {
                 return;
             }
         }
-        System.out.println("Club does not exist");
+        System.out.println("ExtraCurricular.Club does not exist");
     }
     
     //method to remove a particular club from the club arraylist
@@ -131,7 +134,7 @@ public class Student {
                 return;
             }
         }
-        System.out.println("Club not enrolled!");
+        System.out.println("ExtraCurricular.Club not enrolled!");
     }
 
     //method to add a particular event from a paricular club
@@ -142,7 +145,7 @@ public class Student {
                 return;
             }
         }
-        System.out.println("Club not enrolled!");
+        System.out.println("ExtraCurricular.Club not enrolled!");
     }
     
     //method to remove a particular event from a paricular club
@@ -153,7 +156,7 @@ public class Student {
                 return;
             }
         }
-        System.out.println("Club not enrolled!");
+        System.out.println("ExtraCurricular.Club not enrolled!");
     }
     
     // getter for clubArrayList

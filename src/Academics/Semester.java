@@ -1,3 +1,5 @@
+package Academics;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -35,9 +37,9 @@ public class Semester {
         return department;
     }
 
-    // Course List method
+    // Academics.Course List method
 
-    static String str = "Optional Course";
+    static String str = "Optional Academics.Course";
 
     static String[] Sem_1_Courses = new String[]{"MA101", "PH100", "PH160", "IT101", "IT161", "EC100", "EC160", "HS101"};
     static String[] Sem_2_Courses = new String[]{"MA102", "PH110", "PH170", "EE100", "EE160", "CS102", "CS162", "HS102"};
@@ -70,7 +72,7 @@ public class Semester {
                 Sem_No = year * 2;
                 break;
             default:
-                System.out.println("Invalid Semester.");
+                System.out.println("Invalid Academics.Semester.");
         }
 
         switch (Sem_No) {
@@ -118,13 +120,13 @@ public class Semester {
     }
 
 
-    //Methods for Exam Class
+    //Methods for Academics.Exam Class
 
     public void listExams() {
         // Right now it will just print out the examLinkedList
         for (Exam exam : examLinkedList) {
-            System.out.println("Course - " + exam.getCourseName());
-            System.out.println("Exam type - " + exam.getExamType());
+            System.out.println("Academics.Course - " + exam.getCourseName());
+            System.out.println("Academics.Exam type - " + exam.getExamType());
             System.out.println("Date - " + exam.getExamDate());
             System.out.println("Maximum Marks - " + exam.getMaxMarks());
             System.out.println("Weightage in final score (%)  - " + exam.getContribution());

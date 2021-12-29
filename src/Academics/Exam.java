@@ -1,3 +1,5 @@
+package Academics;
+
 public class Exam {
 
     String examType;
@@ -8,7 +10,7 @@ public class Exam {
     boolean proctored;
     String courseName;
 
-    // Course Class Object Parameter will be added when all the codes is merged , expect it will give error
+    // Academics.Course Class Object Parameter will be added when all the codes is merged , expect it will give error
     Exam(String examType, String maxMarks, String contribution, String obtainedMarks, boolean proctored, String courseName, String date) {
         this.examType = examType;
         this.maxMarks = maxMarks;

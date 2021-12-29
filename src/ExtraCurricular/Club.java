@@ -1,3 +1,5 @@
+package ExtraCurricular;
+
 import java.util.LinkedList;
 
 public class Club{
