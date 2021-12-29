@@ -28,17 +28,17 @@ public class Main {
         return new Student(name, studentid, isUG, phoneNum, probation);
     }
 
-    public static int options(){
+    public static int options(Student student){
         Scanner obj = new Scanner(System.in);
 
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
         System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 1 to Add Achievement");
-        System.out.println("Press 1 to Add Achievement");
+        System.out.println("Press 4 to Add Achievement");
+        System.out.println("Press 5 to Add Achievement");
+        System.out.println("Press 6 to Add Achievement");
+        System.out.println("Press 7 to Add Achievement");
+        System.out.println("Press 8 to Add Achievement");
 
         int i = obj.nextInt();
 
@@ -63,7 +63,7 @@ public class Main {
         Student student1 = AddStudent();
         int i;
         do{
-            i = options();
+            i = options(student1);
         }while(i!=0);
     }
 }
