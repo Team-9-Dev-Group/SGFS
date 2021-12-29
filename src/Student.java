@@ -67,19 +67,19 @@ public class Student {
 
     //Adding objects to achievementsArrayList
     public void addAchievement(String name) {
-        Achievement Achievement = new Achievement(name);
+        Achievement achievement = new Achievement(name);
         //TODO: add something according to Achievements class
-        achievementsArrayList.add(Achievement);
+        achievementsArrayList.add(achievement);
     }
 
     public void addAchievement(String name, Date date) {
-        Achievement Achievement = new Achievement(name, date);
-        achievementsArrayList.add(Achievement);
+        Achievement achievement = new Achievement(name, date);
+        achievementsArrayList.add(achievement);
     }
 
     public void addAchievement(String name, Date date, String type) {
-        Achievement Achievement = new Achievement(name, date, type);
-        achievementsArrayList.add(Achievement);
+        Achievement achievement = new Achievement(name, date, type);
+        achievementsArrayList.add(achievement);
     }
 
     public void removeAchievement(String Name) {
