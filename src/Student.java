@@ -108,27 +108,54 @@ public class Student {
         return false;
     }
 
-    // CHECK WHETHER CLUB IS VALID
-
-    // Adding Object to clubArrayList
+    // Adding d to clubArrayList
     public void addClub(String nameOfTheClub){
-        Club club = new Club();
-        club.setNameOfClub(nameOfTheClub);
-        // secretary
-        // jsec
-        clubArrayList.add(club);
+        for (int i=0;i<listOfclubs.length;i++) {
+            if (listOfclubs[i].equalsIgnoreCase(nameOfTheClub)) {
+                Club club = new Club();
+                club.setNameOfClub(nameOfTheClub);
+                club.getNameOfSecretary();
+                club.getNameOfViceSecretary();
+                clubArrayList.add(club);
+                return;
+            }
+        }
+        System.out.println("Club does not exist");
+    }
+    
+    //method to remove a particular club from the club arraylist
+    public void removeClub(String nameOfTheClub) {
+        for (int i=0;i<clubArrayList.size();i++) {
+            if (clubArrayList.get(i).getNameOfClub().equalsIgnoreCase(nameOfTheClub)) {
+                clubArrayList.remove(i);
+                return;
+            }
+        }
+        System.out.println("Club not enrolled!");
     }
 
-    // removeClub
-
-    // club mai event add karne ke liye
+    //method to add a particular event from a paricular club
     public void addEventInClub(String nameOfTheClub, String event){
-//        clubArrayList SEARCH FOR CLUB
+        for (int i=0;i<clubArrayList.size();i++) {
+            if (clubArrayList.get(i).getNameOfClub().equalsIgnoreCase(nameOfTheClub)) {
+                clubArrayList.get(i).setEvent(event);
+                return;
+            }
+        }
+        System.out.println("Club not enrolled!");
     }
-
-    // CLUB MAI EVENT REMOVE KARNE KE LIYE
-
-
+    
+    //method to remove a particular event from a paricular club
+    public void removeEventInClub(String nameOfTheClub, String event){
+        for (int i=0;i<clubArrayList.size();i++) {
+            if (clubArrayList.get(i).getNameOfClub().equalsIgnoreCase(nameOfTheClub)) {
+               clubArrayList.get(i).removeEvent(event);
+                return;
+            }
+        }
+        System.out.println("Club not enrolled!");
+    }
+    
     // getter for clubArrayList
     public ArrayList<Club> getClubArrayList() {
         return clubArrayList;

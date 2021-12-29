@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0efbb6ae-2712-49a7-a3ce-ca1276f4e8af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Club.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Committee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GymKhana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Club.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +23,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Club.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Student.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Semester.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Club.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Course.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Semester.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="203GK1ZfIkRet3iMogfQ6FSibPp" />
   <component name="ProjectViewState">
@@ -37,8 +36,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -66,5 +67,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
