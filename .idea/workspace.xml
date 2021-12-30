@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0efbb6ae-2712-49a7-a3ce-ca1276f4e8af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Assignment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Exam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Exam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Semester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Semester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Achievement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Achievement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Club.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Club.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+    <list default="true" id="0efbb6ae-2712-49a7-a3ce-ca1276f4e8af" name="Changes" comment="Gymkhana and Committee added">
+      <change beforePath="$PROJECT_DIR$/src/ExtraCurricular/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExtraCurricular/Club.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +19,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="47bf2932-340d-4cb4-b7b9-ad31607111b4" />
+        <option name="url" value="https://github.com/Team-9-Dev-Group/ESGFS.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/ExtraCurricular/Club.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Academics/Semester.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Academics/Exam.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Academics/Course.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Main.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Student.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Academics/Semester.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Academics/Course.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="203GK1ZfIkRet3iMogfQ6FSibPp" />
   <component name="ProjectViewState">
@@ -44,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Programming/DSA" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -76,6 +79,14 @@
       <option name="presentableId" value="Default" />
       <updated>1635265793056</updated>
     </task>
+    <task id="LOCAL-00001" summary="Gymkhana and Committee added">
+      <created>1640843970744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640843970744</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +99,12 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+<<<<<<< HEAD
+=======
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Gymkhana and Committee added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gymkhana and Committee added" />
+>>>>>>> 695bb047a334a3cb77ef00f6894f8054002f7f96
   </component>
 </project>

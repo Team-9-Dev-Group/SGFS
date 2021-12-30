@@ -6,22 +6,27 @@ public class Exam {
     String examDate;
     String maxMarks;
     String contribution;
-    String obtainedMarks;
-    boolean proctored;
+    String obtainedMarks="";
+    boolean proctored=false;
     String courseName;
 
-    // Academics.Course Class Object Parameter will be added when all the codes is merged , expect it will give error
-    Exam(String examType, String maxMarks, String contribution, String obtainedMarks, boolean proctored, String courseName, String date) {
+    // Course Class Object Parameter will be added when all the codes is merged , expect it will give error
+    Exam(String examType, String maxMarks, String contribution, String obtainedMarks, String courseName, String date) {
         this.examType = examType;
         this.maxMarks = maxMarks;
         this.contribution = contribution;
         this.obtainedMarks = obtainedMarks;
-        this.proctored = proctored;
         this.courseName = courseName;
         this.examDate = date;
     }
-
-    public Exam(String course, String date) {
+    Exam(String examType, String maxMarks, String contribution, String courseName, String date) {
+        this.examType = examType;
+        this.maxMarks = maxMarks;
+        this.contribution = contribution;
+        this.courseName = courseName;
+        this.examDate = date;
+    }
+    Exam(String course, String date) {
         this.courseName = course;
         this.examDate = date;
     }

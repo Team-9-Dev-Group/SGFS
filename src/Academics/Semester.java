@@ -1,11 +1,12 @@
 package Academics;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Semester {
 
-    private int year;
+    private String year;
     private String semester;
     private String department;
 
@@ -14,11 +15,11 @@ public class Semester {
     private LinkedList<Assignment> assignmentLinkedList = new LinkedList<>();
 
     //Getters and setters
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
@@ -55,7 +56,7 @@ public class Semester {
     static String[] Sem_7_Courses_IT = new String[]{"IT401", "IT461", str, str, str, str, "IT491"};
     static String[] Sem_8_Courses = new String[]{"Project"};
 
-    
+
     //Encapsulation 
     //Use of private keyword
     private void set_CourseList(String[] courses) {
@@ -123,37 +124,9 @@ public class Semester {
         }
     }
 
-
-    //Methods for Academics.Exam Class
-
-    public void listExams() {
-        // Right now it will just print out the examLinkedList
-        for (Exam exam : examLinkedList) {
-            System.out.println("Academics.Course - " + exam.getCourseName());
-            System.out.println("Academics.Exam type - " + exam.getExamType());
-            System.out.println("Date - " + exam.getExamDate());
-            System.out.println("Maximum Marks - " + exam.getMaxMarks());
-            System.out.println("Weightage in final score (%)  - " + exam.getContribution());
-            System.out.println("Obtained Marks - " + exam.getObtainedMarks());
-            System.out.println("Proctored - " + exam.isProctored());
-            System.out.println("\n");
-        }
-    }
-
-    public Boolean modifyExam(String course, String exam_type, String date, String max_marks, String weightage, String obt_marks, Boolean proctored) {
-        for (int i = 0; i < examLinkedList.size(); i++) {
-            if (examLinkedList.get(i).getCourseName().equals(course) && examLinkedList.get(i).getExamType().equals(exam_type) && examLinkedList.get(i).getExamDate().equals(date)) {
-                examLinkedList.set(i, new Exam(exam_type,max_marks, weightage, obt_marks,proctored,course, date));
-                return true; // exam found and modified
-            }
-        }
-        return false; // exam not found
-    }
-
-    //Polymorphism - Overloading
-    
-    public void addExam(String course, String exam_type, String date, String max_marks, String weightage, String obt_marks, Boolean proctored) {
-        Exam newExam = new Exam(exam_type,max_marks, weightage, obt_marks,proctored,course, date);
+    // Polymorphism - Overloading
+    public void addExam(String exam_type, String max_marks, String weightage, String course, String date) {
+        Exam newExam = new Exam(exam_type, max_marks, weightage, course, date);
         examLinkedList.add(newExam);
     }
 
@@ -162,6 +135,7 @@ public class Semester {
         examLinkedList.add(newExam);
     }
 
+    // Polymorphism - Overloading
     public void removeExam(String Course, String Date) {
         for (Exam i : examLinkedList) {
             if (i.examDate.equals(Date) && i.courseName.equalsIgnoreCase(Course)) {
@@ -178,5 +152,28 @@ public class Semester {
         }
     }
 
+    public Boolean modifyExam(String exam_type, String max_marks, String weightage, String course, String date, String obt_marks) {
+        for (int i = 0; i < examLinkedList.size(); i++) {
+            if (examLinkedList.get(i).getCourseName().equals(course) && examLinkedList.get(i).getExamType().equals(exam_type) && examLinkedList.get(i).getExamDate().equals(date)) {
+                examLinkedList.set(i, new Exam(exam_type, max_marks, weightage, obt_marks, course, date));
+                return true; // exam found and modified
+            }
+        }
+        return false; // exam not found
+    }
 
+    // Methods for Exam Class
+    public void listExams() {
+        System.out.println("Your Exams are as follows -");
+        for (Exam exam : examLinkedList) {
+            System.out.println("Course - " + exam.getCourseName());
+            System.out.println("Exam type - " + exam.getExamType());
+            System.out.println("Date - " + exam.getExamDate());
+            System.out.println("Maximum Marks - " + exam.getMaxMarks());
+            System.out.println("Weightage in final score (%)  - " + exam.getContribution());
+            System.out.println("Obtained Marks - " + exam.getObtainedMarks());
+            System.out.println("Proctored - " + exam.isProctored());
+            System.out.println("\n");
+        }
+    }
 }

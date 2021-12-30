@@ -49,6 +49,10 @@ public class Main {
         System.out.println("Press 9 to Print Clubs you are enrolled in");
 
         System.out.println("Press 10 to set semester");
+        System.out.println("Press 11 to Add Exam");
+        System.out.println("Press 12 to Remove Exam");
+        System.out.println("Press 13 to Modify Exam");
+        System.out.println("Press 14 to list added Exams");
 
         int i = obj.nextInt();
 
@@ -90,21 +94,29 @@ public class Main {
                 achievement.getAchievementInfo();
             }
         }
+
+
         if (i == 5) {
+            System.out.print("Enter club name - ");
             String clubName = obj.nextLine();
             student.addClub(clubName);
         }
         if (i == 6) {
+            System.out.print("Enter club name - ");
             String clubName = obj.nextLine();
             student.removeClub(clubName);
         }
         if (i == 7) {
+            System.out.print("Enter club name - ");
             String clubName = obj.nextLine();
+            System.out.print("Enter event description - ");
             String event = obj.nextLine();
             student.addEventInClub(clubName, event);
         }
         if (i == 8) {
+            System.out.print("Enter club name - ");
             String clubName = obj.nextLine();
+            System.out.print("Enter event description - ");
             String event = obj.nextLine();
             student.removeEventInClub(clubName, event);
         }
@@ -112,17 +124,59 @@ public class Main {
             System.out.println("Clubs you are enrolled in are as follows-");
             student.printClubArrayList();
         }
-        if(i==10){
-            System.out.println("Enter the year:");
-            int year = obj.nextInt();
-            System.out.println("Enter the semester:");
+
+
+        if (i == 10) {
+            System.out.print("Enter your year: ");
+            String year = obj.next();
+            System.out.print("Enter your semester: ");
             String sem = obj.next();
-            Semester currentStu = new Semester();
+            System.out.print("Enter your department: ");
+            String dep = obj.next();
+            Semester currentStu = student.getSem();
             currentStu.setYear(year);
             currentStu.setSemester(sem);
             student.setSem(currentStu);
-
-
+            currentStu.create_CourseList(Integer.parseInt(year), sem, dep);
+        }
+        if (i == 11) {
+            System.out.print("Enter course name - ");
+            String course = obj.nextLine();
+            System.out.print("Enter exam type - ");
+            String exam_type = obj.nextLine();
+            System.out.print("Enter date - ");
+            String date = obj.nextLine();
+            System.out.print("Enter maximum marks - ");
+            String max_marks = obj.nextLine();
+            System.out.print("Enter weightage to final grade of course - ");
+            String weightage = obj.nextLine();
+            student.getSem().addExam(course, exam_type, date, max_marks, weightage);
+        }
+        if (i == 12) {
+            System.out.print("Enter course name - ");
+            String course = obj.nextLine();
+            System.out.print("Enter date - ");
+            String date = obj.nextLine();
+            student.getSem().removeExam(course, date);
+        }
+        if (i == 13) {
+            System.out.print("Enter course name - ");
+            String course = obj.nextLine();
+            System.out.print("Enter exam type - ");
+            String exam_type = obj.nextLine();
+            System.out.print("Enter date - ");
+            String date = obj.nextLine();
+            System.out.print("Enter maximum marks - ");
+            String max_marks = obj.nextLine();
+            System.out.print("Enter weightage to final grade of course - ");
+            String weightage = obj.nextLine();
+            System.out.print("Enter obtained marks - ");
+            String obt_amrks = obj.nextLine();
+            student.getSem().modifyExam(course, exam_type, date, max_marks, weightage,obt_amrks);
+        }
+        if (i == 14) {
+            System.out.println("Your Exams are as follows -");
+            student.getSem().listExams();
         }
 
         return i;
