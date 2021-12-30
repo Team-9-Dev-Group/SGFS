@@ -53,8 +53,10 @@ public class Main {
         System.out.println("Press 12 to Remove Exam");
         System.out.println("Press 13 to Modify Exam");
         System.out.println("Press 14 to list added Exams");
-
+        
+        System.out.print("Enter your choice : ");
         int i = obj.nextInt();
+        System.out.println();
 
         if (i == 1) {
             System.out.print("Enter Acievement name - ");
@@ -145,7 +147,6 @@ public class Main {
             obj.nextLine();
             String course = obj.nextLine();
             System.out.print("Enter exam type - ");
-            obj.nextLine();
             String exam_type = obj.nextLine();
             System.out.print("Enter date - ");
             String date = obj.nextLine();
