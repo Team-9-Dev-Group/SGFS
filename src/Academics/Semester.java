@@ -39,7 +39,7 @@ public class Semester {
 
     // Academics.Course List method
 
-    static String str = "Optional Academics.Course";
+    static String str = "Optional Course";
 
     static String[] Sem_1_Courses = new String[]{"MA101", "PH100", "PH160", "IT101", "IT161", "EC100", "EC160", "HS101"};
     static String[] Sem_2_Courses = new String[]{"MA102", "PH110", "PH170", "EE100", "EE160", "CS102", "CS162", "HS102"};
