@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0efbb6ae-2712-49a7-a3ce-ca1276f4e8af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Assignment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Exam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Exam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Academics/Semester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Academics/Semester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Achievement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Achievement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Club.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/ExtraCurricular/Club.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSSFS/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSSFS/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExtraCurricular/Committee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExtraCurricular/Gymkhana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +23,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="47bf2932-340d-4cb4-b7b9-ad31607111b4" />
+        <option name="url" value="https://github.com/Team-9-Dev-Group/ESGFS.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/ExtraCurricular/Club.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Student.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Academics/Semester.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Academics/Course.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Student.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="203GK1ZfIkRet3iMogfQ6FSibPp" />
   <component name="ProjectViewState">
@@ -88,6 +94,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
