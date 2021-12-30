@@ -1,8 +1,6 @@
 package Academics;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Semester {
 
@@ -70,14 +68,14 @@ public class Semester {
     public void create_CourseList(int year, String semester, String department) {
         int Sem_No = 0;
         switch (semester) {
-            case "Autumn":
+            case "autumn":
                 Sem_No = (year * 2) - 1;
                 break;
-            case "Winter":
+            case "winter":
                 Sem_No = year * 2;
                 break;
             default:
-                System.out.println("Invalid Academics.Semester.");
+                System.out.println("Invalid Semester.");
         }
 
         switch (Sem_No) {
@@ -164,7 +162,7 @@ public class Semester {
 
     // Methods for Exam Class
     public void listExams() {
-        System.out.println("Your Exams are as follows -");
+        Collections.sort(examLinkedList, new StockComparator());
         for (Exam exam : examLinkedList) {
             System.out.println("Course - " + exam.getCourseName());
             System.out.println("Exam type - " + exam.getExamType());
@@ -174,6 +172,44 @@ public class Semester {
             System.out.println("Obtained Marks - " + exam.getObtainedMarks());
             System.out.println("Proctored - " + exam.isProctored());
             System.out.println("\n");
+        }
+    }
+}
+
+class StockComparator implements Comparator<Exam> {
+    public int compare(Exam e1, Exam e2) {
+        int year1, year2, mon1, mon2, day1, day2;
+        year1 = Integer.parseInt(e1.getExamDate().substring(6, 10));
+        year2 = Integer.parseInt(e2.getExamDate().substring(6, 10));
+        mon1 = Integer.parseInt(e1.getExamDate().substring(3, 5));
+        mon2 = Integer.parseInt(e2.getExamDate().substring(3, 5));
+        day1 = Integer.parseInt(e1.getExamDate().substring(0, 2));
+        day2 = Integer.parseInt(e2.getExamDate().substring(0, 2));
+
+        if(year1>year2){
+            return 1;
+        }
+        else if(year1<year2){
+            return -1;
+        }
+        else{
+            if(mon1>mon2){
+                return 1;
+            }
+            else if(mon1<mon2){
+                return -1;
+            }
+            else{
+                if(day1>day2){
+                    return 1;
+                }
+                else if(day1<day2){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            }
         }
     }
 }

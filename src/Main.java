@@ -133,16 +133,19 @@ public class Main {
             String sem = obj.next();
             System.out.print("Enter your department: ");
             String dep = obj.next();
-            Semester currentStu = student.getSem();
+            Semester currentStu = new Semester();
             currentStu.setYear(year);
             currentStu.setSemester(sem);
+            currentStu.setDepartment(dep);
             student.setSem(currentStu);
             currentStu.create_CourseList(Integer.parseInt(year), sem, dep);
         }
         if (i == 11) {
             System.out.print("Enter course name - ");
+            obj.nextLine();
             String course = obj.nextLine();
             System.out.print("Enter exam type - ");
+            obj.nextLine();
             String exam_type = obj.nextLine();
             System.out.print("Enter date - ");
             String date = obj.nextLine();
@@ -150,7 +153,7 @@ public class Main {
             String max_marks = obj.nextLine();
             System.out.print("Enter weightage to final grade of course - ");
             String weightage = obj.nextLine();
-            student.getSem().addExam(course, exam_type, date, max_marks, weightage);
+            student.getSem().addExam(exam_type,max_marks,weightage,course, date );
         }
         if (i == 12) {
             System.out.print("Enter course name - ");
@@ -172,7 +175,7 @@ public class Main {
             String weightage = obj.nextLine();
             System.out.print("Enter obtained marks - ");
             String obt_amrks = obj.nextLine();
-            student.getSem().modifyExam(course, exam_type, date, max_marks, weightage,obt_amrks);
+            student.getSem().modifyExam(exam_type,max_marks,weightage,course,date,obt_amrks);
         }
         if (i == 14) {
             System.out.println("Your Exams are as follows -");
