@@ -1,8 +1,9 @@
 package ExtraCurricular;
 
 import java.util.LinkedList;
+
 // Inheritance
-public class Club extends Committee{
+public class Club extends Committee implements ClubInterface{
     private String nameOfClub;
     private String nameOfSecretary;
     private String nameOfJointSecretary;
@@ -22,9 +23,16 @@ public class Club extends Committee{
         this.nameOfCommittee = nameOfCommittee;
     }
 
+
     public void setNameOfSecretary(String nameOfSecretary) {
         this.nameOfSecretary = nameOfSecretary;
     }
+
+    @Override
+    public void setNameOfJointSecretary(String nameOfViceSecretary) {
+        this.nameOfJointSecretary = nameOfViceSecretary;
+    }
+
 
     public void setNameOfViceSecretary(String nameOfViceSecretary) {
         this.nameOfViceSecretary = nameOfViceSecretary;
