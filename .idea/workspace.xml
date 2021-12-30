@@ -33,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/src/Main.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Student.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Academics/Semester.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Academics/Exam.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Academics/Course.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="203GK1ZfIkRet3iMogfQ6FSibPp" />
@@ -44,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Programming/DSA" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -88,6 +89,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
