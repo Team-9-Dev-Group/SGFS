@@ -1,5 +1,8 @@
 package ExtraCurricular;
 
+
+
+// Inheritance
 public class Committee extends Gymkhana {
     // noOfclubs, President , vPrecident, Name,feastname
     int noOfclubs;
