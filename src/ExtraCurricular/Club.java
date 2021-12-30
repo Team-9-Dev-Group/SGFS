@@ -23,9 +23,16 @@ public class Club extends Committee implements ClubInterface{
         this.nameOfCommittee = nameOfCommittee;
     }
 
+
     public void setNameOfSecretary(String nameOfSecretary) {
         this.nameOfSecretary = nameOfSecretary;
     }
+
+    @Override
+    public void setNameOfJointSecretary(String nameOfViceSecretary) {
+        this.nameOfJointSecretary = nameOfViceSecretary;
+    }
+
 
     public void setNameOfViceSecretary(String nameOfViceSecretary) {
         this.nameOfViceSecretary = nameOfViceSecretary;

@@ -1,3 +1,5 @@
+package ExtraCurricular;
+
 public interface ClubInterface {
     public void setEvent(String event);
     public void setNameOfClub(String nameOfClub);
