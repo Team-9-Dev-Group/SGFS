@@ -1,7 +1,7 @@
 package ExtraCurricular;
 
 import java.util.LinkedList;
-
+// Inheritance
 public class Club extends Committee{
     private String nameOfClub;
     private String nameOfSecretary;
