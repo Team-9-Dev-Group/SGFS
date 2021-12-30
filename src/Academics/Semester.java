@@ -160,6 +160,16 @@ public class Semester {
         return false; // exam not found
     }
 
+    public Boolean modifyExam(String exam_type, String max_marks, String weightage, String course, String date) {
+        for (int i = 0; i < examLinkedList.size(); i++) {
+            if (examLinkedList.get(i).getCourseName().equals(course) && examLinkedList.get(i).getExamType().equals(exam_type) && examLinkedList.get(i).getExamDate().equals(date)) {
+                examLinkedList.set(i, new Exam(exam_type, max_marks, weightage, course, date));
+                return true; // exam found and modified
+            }
+        }
+        return false; // exam not found
+    }
+
     // Methods for Exam Class
     public void listExams() {
         Collections.sort(examLinkedList, new StockComparator());
