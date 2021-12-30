@@ -55,6 +55,9 @@ public class Semester {
     static String[] Sem_7_Courses_IT = new String[]{"IT401", "IT461", str, str, str, str, "IT491"};
     static String[] Sem_8_Courses = new String[]{"Project"};
 
+    
+    //Encapsulation 
+    //Use of private keyword
     private void set_CourseList(String[] courses) {
         for (int i = 0; i < courses.length; i++) {
             Course name = new Course();
@@ -147,6 +150,8 @@ public class Semester {
         return false; // exam not found
     }
 
+    //Polymorphism - Overloading
+    
     public void addExam(String course, String exam_type, String date, String max_marks, String weightage, String obt_marks, Boolean proctored) {
         Exam newExam = new Exam(exam_type,max_marks, weightage, obt_marks,proctored,course, date);
         examLinkedList.add(newExam);
