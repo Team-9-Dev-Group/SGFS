@@ -1,3 +1,4 @@
+import Academics.Semester;
 import ExtraCurricular.Achievement;
 
 import java.util.Date;
@@ -112,7 +113,16 @@ public class Main {
             student.printClubArrayList();
         }
         if(i==10){
-            
+            System.out.println("Enter the year:");
+            int year = obj.nextInt();
+            System.out.println("Enter the semester:");
+            String sem = obj.next();
+            Semester currentStu = new Semester();
+            currentStu.setYear(year);
+            currentStu.setSemester(sem);
+            student.setSem(currentStu);
+
+
         }
 
         return i;

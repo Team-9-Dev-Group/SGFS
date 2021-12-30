@@ -25,7 +25,8 @@ public class Student {
         this.StudentId = StudentId;
         this.isUG = isUG;
         this.phone_no = phone_no;
-        this.Probation = Probation;
+        this.Probation = probation;
+
     }
 
     public String getName() {
@@ -180,5 +181,13 @@ public class Student {
             return true;
         else
             return false;
+    }
+
+    public void setSem(Semester sem) {
+        this.sem = sem;
+    }
+
+    public Semester getSem() {
+        return sem;
     }
 }
