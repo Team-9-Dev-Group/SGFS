@@ -2,7 +2,7 @@ package ExtraCurricular;
 
 import java.util.LinkedList;
 
-public class Club{
+public class Club extends Committee{
     private String nameOfClub;
     private String nameOfSecretary;
     private String nameOfJointSecretary;
