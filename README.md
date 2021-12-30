@@ -1,6 +1,6 @@
-# ESGFS
+# SGFS
 
-• ESGFS - Exam Schedule Generator For Students. 🤓😅 We need a cool name.<br/>
+• SGFS - Schedule Generator For Students. 🤓😅 We need a cool name.<br/>
 • Google Doc - [link](https://docs.google.com/document/d/1FH8NuSXVpzHmYYtKzLB0ViCB7Rpw5jpsUXfR51R-CVA/edit)<br/>
 
 **Rules to be followed while contributing** -<br/>
